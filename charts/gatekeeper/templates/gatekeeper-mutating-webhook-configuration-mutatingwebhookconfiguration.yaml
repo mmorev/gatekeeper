@@ -9,7 +9,11 @@ metadata:
     gatekeeper.sh/system: "yes"
     heritage: '{{ .Release.Service }}'
     release: '{{ .Release.Name }}'
+  {{- if .Values.mutatingWebhookOrderPrefix }}
+  name: {{ .Values.mutatingWebhookOrderPrefix }}-gatekeeper-mutating-webhook-configuration
+  {{- else }}
   name: gatekeeper-mutating-webhook-configuration
+  {{- end }}
 webhooks:
 - admissionReviewVersions:
   - v1

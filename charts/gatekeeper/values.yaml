@@ -25,6 +25,7 @@ mutatingWebhookExemptNamespacesLabels: {}
 mutatingWebhookObjectSelector: {}
 mutatingWebhookTimeoutSeconds: 1
 mutatingWebhookCustomRules: {}
+mutatingWebhookOrderPrefix:
 mutationAnnotations: false
 auditChunkSize: 500
 logLevel: INFO
